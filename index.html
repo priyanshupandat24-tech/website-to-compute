@@ -1,56 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manshi Birthday Surprise</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    text-align: center;
+  }
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="https://glitch.com/favicon.ico" />
+  h1 {
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 2px 2px #ff0000;
+    animation: rainbow 3s linear infinite;
+  }
 
-  <!--
-      This is the page head - it contains info the browser uses
-      Like the title, which appears on the browser tab but not inside the page
-      Further down you'll see the content that displays in the page
-    -->
-  <title>Hello World!</title>
+  @keyframes rainbow {
+    0% {color: red;}
+    14% {color: orange;}
+    28% {color: yellow;}
+    42% {color: green;}
+    57% {color: blue;}
+    71% {color: indigo;}
+    85% {color: violet;}
+    100% {color: red;}
+  }
 
-  <!-- The website stylesheet -->
-  <link rel="stylesheet" href="/style.css" />
+  #candle {
+    width: 50px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
 
-  <!-- The website JavaScript file -->
-  <script src="/script.js" defer></script>
-</head>
+  #candle:hover {
+    transform: scale(1.2) rotate(-5deg);
+  }
 
-<body>
-  <!--
-      The body includes the content you see in the page
-      Each element is defined using tags, like this <div></div>
-      The attributes like class="wrapper" let us style elements in the CSS
-    -->
-  <div class="wrapper">
-    <div class="content" role="main">
-      <h1 class="title">Oh hi website!</h1>
-      <img src="/cool-website.svg" class="illustration" alt="cool website" />
-      <div class="instructions">
-        <p>
-          Fork <a href="https://github.com/glitchdotcom/website-to-compute">this project</a> and open it in a GitHub Codespace.
-        </p>
-        <p> Follow the steps in the README to deploy your new website to Fastly in a few steps!
-        </p>
+  .blow {
+    animation: blow 1s forwards;
+  }
 
-      </div>
-
-      <footer class="footer">
-        <div>
-          <a class="remix" href="https://github.com/glitchdotcom/website-to-compute">🚧 Get your own site</a>
-        </div>
-      </footer>
-    </div>
-  </div>
-</body>
-
-</html>
+  @keyframes blow {
